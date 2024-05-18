@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  @apply text-white scroll-smooth;
+}
+body {
+  @apply bg-darkBlue;
+  background-image: url("/BackgroundShapes.svg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: top;
+}
