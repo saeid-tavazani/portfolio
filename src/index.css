@@ -4,6 +4,7 @@
 
 * {
   @apply text-white scroll-smooth;
+  font-family: Vazirmatn;
 }
 body {
   @apply bg-darkBlue;
