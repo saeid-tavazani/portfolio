@@ -10,6 +10,7 @@ export default {
       lightPink: "#E68895",
       purple: "#6551D4",
       lightGrayishBlue: "#919CB5",
+      transparent: "#fff0",
     },
   },
   plugins: [],
