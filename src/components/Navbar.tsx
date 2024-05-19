@@ -17,7 +17,7 @@ const Navbar = () => {
             <a href="#">پروژه ها</a>
           </li>
           <li className="md:hidden block">
-            <a href="#">پروژه ها</a>
+            <a href="tel:09911561251">تماس با من</a>
           </li>
         </ul>
         <a className="hidden md:flex items-center gap-2" href="tel:09911561251">
