@@ -28,24 +28,24 @@ body {
 }
 
 #shadow-purple {
-  @apply opacity-10 absolute rounded-3xl;
+  @apply opacity-10 absolute;
   backdrop-filter: blur(10px);
-  z-index: 1;
+  z-index: -1;
   width: 800px;
-  height: 900px;
+  height: 100vh;
   background: radial-gradient(
     circle,
-    rgba(101, 81, 212, 1) 0%,
+    rgb(101, 81, 212) 0%,
     rgba(255, 255, 255, 0) 60%
   );
 }
 
 #shadow-lightPink {
-  @apply opacity-10 absolute rounded-3xl;
+  @apply opacity-10 absolute;
   backdrop-filter: blur(10px);
-  z-index: 0;
+  z-index: -1;
   width: 800px;
-  height: 900px;
+  height: 100vh;
   background: radial-gradient(
     circle,
     hsl(352, 65%, 72%) 0%,

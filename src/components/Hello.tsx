@@ -56,8 +56,6 @@ const Hello = () => {
   }, []);
   return (
     <section id="home" className="w-full h-screen relative">
-      <div id="shadow-lightPink" className="left-[-20%] bottom-[-25%]"></div>
-      <div id="shadow-purple" className="right-[-25%] top-[-25%]"></div>
       <article className="container h-full mx-auto flex items-center gap-4">
         <div className="flex-1">
           <h1 className="text-4xl font-bold leading-[60px] text-center">
@@ -100,6 +98,8 @@ const Hello = () => {
           className="w-3 h-3 rounded-full bg-white"
         ></motion.span>
       </a>
+      <div id="shadow-lightPink" className="left-[-20%] bottom-[-40%]"></div>
+      <div id="shadow-purple" className="right-[-25%] top-[-20%]"></div>
     </section>
   );
 };
