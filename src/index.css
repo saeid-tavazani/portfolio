@@ -18,3 +18,29 @@ body {
   @apply bg-clip-text text-transparent;
   background-image: linear-gradient(65deg, #f3d693, #e68895, #6551d4);
 }
+
+#shadow-purple {
+  @apply opacity-10 absolute rounded-3xl;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  width: 800px;
+  height: 900px;
+  background: radial-gradient(
+    circle,
+    rgba(101, 81, 212, 1) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+}
+
+#shadow-lightPink {
+  @apply opacity-10 absolute rounded-3xl;
+  backdrop-filter: blur(10px);
+  z-index: 0;
+  width: 800px;
+  height: 900px;
+  background: radial-gradient(
+    circle,
+    hsl(352, 65%, 72%) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+}

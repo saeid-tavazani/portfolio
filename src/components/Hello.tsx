@@ -54,7 +54,9 @@ const Hello = () => {
     };
   }, []);
   return (
-    <section className="w-full h-screen">
+    <section className="w-full h-screen relative overflow-hidden">
+      <div id="shadow-lightPink" className="left-[-20%] bottom-[-25%]"></div>
+      <div id="shadow-purple" className="right-[-25%] top-[-25%]"></div>
       <article className="container h-full mx-auto flex items-center gap-4">
         <div className="flex-1">
           <h1 className="text-4xl font-bold leading-[60px] text-center">
@@ -67,7 +69,6 @@ const Hello = () => {
             frameloop="demand"
             shadows
             dpr={[1, 2]}
-            // camera={{ position: [20, 3, 5], fov: 25 }}
             gl={{ preserveDrawingBuffer: true }}
           >
             <Suspense fallback={null}>
@@ -87,5 +88,4 @@ const Hello = () => {
     </section>
   );
 };
-
 export default Hello;
