@@ -8,16 +8,19 @@ const Navbar = () => {
         </div>
         <ul className="flex items-center gap-4">
           <li>
-            <a href="#">خانه</a>
+            <a href="#home">خانه</a>
           </li>
           <li>
-            <a href="#">درباره من</a>
+            <a href="#about">درباره من</a>
           </li>
           <li>
-            <a href="#">پروژه ها</a>
+            <a href="#projects">پروژه ها</a>
           </li>
-          <li className="md:hidden block">
-            <a href="tel:09911561251">تماس با من</a>
+          <li>
+            <a href="#Skills">مهارت های من</a>
+          </li>
+          <li>
+            <a href="#Contact">راه های ارتباطی</a>
           </li>
         </ul>
         <a

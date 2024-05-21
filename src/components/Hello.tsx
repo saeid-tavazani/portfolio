@@ -55,7 +55,7 @@ const Hello = () => {
     };
   }, []);
   return (
-    <section className="w-full h-screen relative">
+    <section id="home" className="w-full h-screen relative">
       <div id="shadow-lightPink" className="left-[-20%] bottom-[-25%]"></div>
       <div id="shadow-purple" className="right-[-25%] top-[-25%]"></div>
       <article className="container h-full mx-auto flex items-center gap-4">
