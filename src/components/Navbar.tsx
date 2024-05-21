@@ -20,7 +20,10 @@ const Navbar = () => {
             <a href="tel:09911561251">تماس با من</a>
           </li>
         </ul>
-        <a className="hidden md:flex items-center gap-2" href="tel:09911561251">
+        <a
+          className="hidden md:flex items-center gap-2 border border-solid rounded-full py-3 px-6"
+          href="tel:09911561251"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
