@@ -57,9 +57,9 @@ const Hello = () => {
     <section className="w-full h-screen">
       <article className="container h-full mx-auto flex items-center gap-4">
         <div className="flex-1">
-          <h1 className="text-4xl font-bold leading-[60px]">
-            سلام من سعید توازانی هستم <br /> توسعه دهنده{" "}
-            <span className="text-gradient">Front-End</span> هستم.
+          <h1 className="text-4xl font-bold leading-[60px] text-center">
+            سلام من سعید توازانی هستم <br /> توسعه دهنده
+            <span className="text-gradient"> Front-End </span> هستم
           </h1>
         </div>
         <div className="flex-1 h-full flex items-center">
