@@ -5,7 +5,7 @@ type prop = {
   classStyle: string;
 };
 
-const layout = ({ children, classStyle }: prop) => {
+const Layout = ({ children, classStyle }: prop) => {
   return (
     <section className="w-screen h-screen flex items-center">
       <article
@@ -19,4 +19,4 @@ const layout = ({ children, classStyle }: prop) => {
   );
 };
 
-export default layout;
+export default Layout;
