@@ -1,6 +1,7 @@
 import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import Layout from "./Layout";
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("/3DModelDevelopment/scene.gltf");
@@ -40,38 +41,36 @@ const About = () => {
     };
   }, []);
   return (
-    <section id="about" className="w-full h-screen">
-      <article className="container mx-auto flex items-center gap-4 h-full">
-        <div className="flex-1 h-full">
-          <Canvas
-            frameloop="demand"
-            shadows
-            dpr={[1, 2]}
-            gl={{ preserveDrawingBuffer: true }}
-          >
-            <Suspense fallback={null}>
-              <OrbitControls
-                enableZoom={false}
-                maxPolarAngle={Math.PI / 2}
-                minPolarAngle={Math.PI / 2}
-              />
-              <Computers isMobile={isMobile} />
-              <ambientLight />
-            </Suspense>
-            <Preload all />
-          </Canvas>
-        </div>
-        <div className="flex-1 flex flex-col gap-4">
-          <h2 className="text-3xl font-bold">درباره من</h2>
-          <p>
-            من سعید توازنی هستم، یک توسعه دهنده وب با 5 سال سابقه کار در اصفهان.
-            من دانشجوی دانشگاه شهید محسن مهاجر اصفهان نیز هستم. من در زمینه
-            توسعه front-end و back-end تخصص دارم و به نوشتن کدهای تمیز و کارآمد
-            و به روز ماندن با آخرین روندهای صنعت علاقه مند هستم.
-          </p>
-        </div>
-      </article>
-    </section>
+    <Layout slug="about" className="grid-cols-2">
+      <div className="sm:col-span-2 lg:col-span-1 h-screen">
+        <Canvas
+          frameloop="demand"
+          shadows
+          dpr={[1, 2]}
+          gl={{ preserveDrawingBuffer: true }}
+        >
+          <Suspense fallback={null}>
+            <OrbitControls
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+            />
+            <Computers isMobile={isMobile} />
+            <ambientLight />
+          </Suspense>
+          <Preload all />
+        </Canvas>
+      </div>
+      <div className="sm:col-span-2 lg:col-span-1 flex flex-col gap-4">
+        <h2 className="text-3xl font-bold">درباره من</h2>
+        <p>
+          من سعید توازنی هستم، یک توسعه دهنده وب با 5 سال سابقه کار در اصفهان.
+          من دانشجوی دانشگاه شهید محسن مهاجر اصفهان نیز هستم. من در زمینه توسعه
+          front-end و back-end تخصص دارم و به نوشتن کدهای تمیز و کارآمد و به روز
+          ماندن با آخرین روندهای صنعت علاقه مند هستم.
+        </p>
+      </div>
+    </Layout>
   );
 };
 
