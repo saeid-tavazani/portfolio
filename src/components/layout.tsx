@@ -1,16 +1,17 @@
 import { ReactNode } from "react";
 
 type prop = {
-  children: ReactNode;
-  classStyle: string;
+  children?: ReactNode;
+  className?: string;
+  slug?: string;
 };
 
-const Layout = ({ children, classStyle }: prop) => {
+const Layout = ({ children, className, slug }: prop) => {
   return (
-    <section className="w-screen h-screen flex items-center">
+    <section id={slug} className="w-screen h-screen flex items-center relative">
       <article
-        className={`container mx-auto grid gap-4 ${
-          classStyle ? classStyle : ""
+        className={`container mx-auto grid items-center gap-4 ${
+          className ? className : ""
         }`}
       >
         {children}

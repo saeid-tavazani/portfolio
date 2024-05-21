@@ -2,6 +2,7 @@ import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion";
+import Layout from "./Layout";
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("/3DModelMac/scene.gltf");
@@ -41,49 +42,43 @@ const Hello = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 600px)");
-
     setIsMobile(mediaQuery.matches);
-
     const handleMediaQueryChange = (event: MediaQueryListEvent) => {
       setIsMobile(event.matches);
     };
-
     mediaQuery.addEventListener("change", handleMediaQueryChange);
-
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
   return (
-    <section id="home" className="w-full h-screen relative">
-      <article className="container h-full mx-auto flex items-center gap-4">
-        <div className="flex-1">
-          <h1 className="text-4xl font-bold leading-[60px] text-center">
-            سلام من سعید توازانی هستم <br /> توسعه دهنده
-            <span className="text-gradient"> Front-End </span> هستم
-          </h1>
-        </div>
-        <div className="flex-1 h-full flex items-center">
-          <Canvas
-            frameloop="demand"
-            shadows
-            dpr={[1, 2]}
-            gl={{ preserveDrawingBuffer: true }}
-          >
-            <Suspense fallback={null}>
-              <OrbitControls
-                enableZoom={false}
-                maxPolarAngle={Math.PI / 2}
-                minPolarAngle={Math.PI / 2}
-              />
-              <Computers isMobile={isMobile} />
-              <ambientLight />
-            </Suspense>
+    <Layout slug="home" className="grid-cols-2">
+      <div className="sm:col-span-2 lg:col-span-1">
+        <h1 className="text-4xl font-bold leading-[60px] text-center">
+          سلام من سعید توازانی هستم <br /> توسعه دهنده
+          <span className="text-gradient"> Front-End </span> هستم
+        </h1>
+      </div>
+      <div className="sm:col-span-2 h-screen lg:col-span-1">
+        <Canvas
+          frameloop="demand"
+          shadows
+          dpr={[1, 2]}
+          gl={{ preserveDrawingBuffer: true }}
+        >
+          <Suspense fallback={null}>
+            <OrbitControls
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+            />
+            <Computers isMobile={isMobile} />
+            <ambientLight />
+          </Suspense>
 
-            <Preload all />
-          </Canvas>
-        </div>
-      </article>
+          <Preload all />
+        </Canvas>
+      </div>
       <a
         href="#about"
         className="w-7 h-14 border border-solid absolute bottom-8 left-1/2 rounded-xl flex py-2 justify-center cursor-pointer"
@@ -100,7 +95,7 @@ const Hello = () => {
       </a>
       <div id="shadow-lightPink" className="left-[-20%] bottom-[-40%]"></div>
       <div id="shadow-purple" className="right-[-25%] top-[-20%]"></div>
-    </section>
+    </Layout>
   );
 };
 export default Hello;
