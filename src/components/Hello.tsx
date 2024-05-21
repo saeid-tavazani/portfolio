@@ -25,7 +25,7 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
         castShadow
         shadow-mapSize={1200}
       />
-      <pointLight intensity={0.5} position={[0, -1, 0]} />
+      <pointLight intensity={0.5} position={[-0.3, -1, 1]} />
       <ambientLight intensity={0.5} />
       <primitive
         object={computer.scene}
