@@ -1,6 +1,7 @@
 import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { motion } from "framer-motion";
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("/3DModelMac/scene.gltf");
@@ -39,7 +40,7 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
 const Hello = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
 
     setIsMobile(mediaQuery.matches);
 
@@ -85,6 +86,20 @@ const Hello = () => {
           </Canvas>
         </div>
       </article>
+      <a
+        href="#about"
+        className="w-7 h-14 border border-solid absolute bottom-8 left-1/2 rounded-xl flex py-2 justify-center cursor-pointer"
+      >
+        <motion.span
+          animate={{ y: [0, 25, 0] }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+          className="w-3 h-3 rounded-full bg-white"
+        ></motion.span>
+      </a>
     </section>
   );
 };
