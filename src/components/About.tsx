@@ -40,7 +40,7 @@ const About = () => {
     };
   }, []);
   return (
-    <section className="w-full h-screen">
+    <section id="about" className="w-full h-screen">
       <article className="container mx-auto flex items-center gap-4 h-full">
         <div className="flex-1 h-full">
           <Canvas
