@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
-  const computer = useGLTF("/3dmodel/scene.gltf");
+  const computer = useGLTF("/3DModelMac/scene.gltf");
 
   return (
     <mesh>
