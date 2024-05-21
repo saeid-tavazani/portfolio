@@ -12,6 +12,8 @@ body {
   background-repeat: repeat-y;
   background-size: cover;
   background-position: top;
+  width: 100%;
+  overflow: hidden;
 }
 
 .text-gradient {

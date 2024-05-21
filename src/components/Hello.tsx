@@ -31,7 +31,7 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
         object={computer.scene}
         scale={isMobile ? 3 : 7.5}
         position={isMobile ? [0, -1, 0] : [0, -1, 0]}
-        rotation={[0, 0, 0.3]}
+        rotation={[0, 1.6, 0.3]}
       />
     </mesh>
   );
@@ -55,7 +55,7 @@ const Hello = () => {
     };
   }, []);
   return (
-    <section className="w-full h-screen relative overflow-hidden">
+    <section className="w-full h-screen relative">
       <div id="shadow-lightPink" className="left-[-20%] bottom-[-25%]"></div>
       <div id="shadow-purple" className="right-[-25%] top-[-25%]"></div>
       <article className="container h-full mx-auto flex items-center gap-4">
