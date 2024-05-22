@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import Layout from "./Layout";
 import { NavbarData } from "../assets/data";
 import { motion } from "framer-motion";
-import { model3D, helloVariants } from "../motion";
+import { model3DVariants, helloVariants } from "../motion";
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("/3DModelMac/scene.gltf");
@@ -66,7 +66,7 @@ const Hello = () => {
       </motion.div>
       <motion.div
         className="col-span-2 row-span-2 lg:row-span-3 lg:col-span-1 w-full h-full"
-        variants={model3D}
+        variants={model3DVariants}
       >
         <div className="w-full h-full">
           <Canvas

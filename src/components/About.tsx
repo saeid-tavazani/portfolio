@@ -3,6 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import Layout from "./Layout";
 import { AboutMe } from "../assets/data";
+import { aboutVariants, helloVariants } from "../motion";
+import { motion } from "framer-motion";
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("/3DModelDevelopment/scene.gltf");
@@ -43,7 +45,10 @@ const About = () => {
   }, []);
   return (
     <Layout slug="about" className="grid-cols-2 grid-rows-3">
-      <div className="col-span-2 row-span-1 lg:row-span-3 lg:col-span-1 w-full h-full">
+      <motion.div
+        variants={helloVariants}
+        className="col-span-2 row-span-1 lg:row-span-3 lg:col-span-1 w-full h-full"
+      >
         <Canvas
           frameloop="demand"
           shadows
@@ -61,11 +66,14 @@ const About = () => {
           </Suspense>
           <Preload all />
         </Canvas>
-      </div>
-      <div className="col-span-2 row-span-2 lg:row-span-3 lg:col-span-1 flex flex-col gap-4 w-full h-full justify-start lg:justify-center">
+      </motion.div>
+      <motion.div
+        variants={aboutVariants}
+        className="col-span-2 row-span-2 lg:row-span-3 lg:col-span-1 flex flex-col gap-4 w-full h-full justify-start lg:justify-center"
+      >
         <h2 className="text-3xl font-bold">درباره من</h2>
         <p>{AboutMe}</p>
-      </div>
+      </motion.div>
     </Layout>
   );
 };
