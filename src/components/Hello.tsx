@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion";
 import Layout from "./Layout";
+import { NavbarData } from "../assets/data";
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("/3DModelMac/scene.gltf");
@@ -19,7 +20,6 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
         shadow-mapSize={1200}
       />
       <spotLight
-        // position={[2, 1, 0]}
         angle={5}
         penumbra={1}
         intensity={6}
@@ -55,9 +55,9 @@ const Hello = () => {
     <Layout slug="home" className="grid-cols-2 grid-rows-3">
       <div className="col-span-2 row-span-1 lg:row-span-3 lg:col-span-1">
         <h1 className="text-4xl font-bold leading-[60px] text-center">
-          سلام من سعید توازانی هستم <br className="hidden lg:block" /> توسعه
-          دهنده
-          <span className="text-gradient"> Front-End </span> هستم
+          سلام! من {NavbarData.name} هستم
+          <br className="hidden lg:block" />
+          <span className="text-gradient"> {NavbarData.jobPosition} </span>
         </h1>
       </div>
       <div className="col-span-2 row-span-2 lg:row-span-3 lg:col-span-1 w-full h-full">

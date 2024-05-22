@@ -142,7 +142,7 @@ type NavbarDataType = {
 
 export const NavbarData: NavbarDataType = {
   name: "سعید توازانی",
-  jobPosition: "برنامه نویس Front-End",
+  jobPosition: "توسعه دهنده Front-End",
   navigation: [
     { slug: "home", title: "خانه" },
     { slug: "about", title: "درباره من" },
