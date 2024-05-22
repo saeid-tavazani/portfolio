@@ -15,7 +15,7 @@ const Skills = () => {
       <motion.div className="flex gap-4 justify-center py-5 flex-wrap">
         {Ability.map((item, index) => (
           <motion.img
-            variants={skillsVariants(index)}
+            variants={skillsVariants(index / 30)}
             className="w-14"
             key={item}
             src={item}
