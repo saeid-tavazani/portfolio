@@ -20,7 +20,7 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
       <ambientLight intensity={0.5} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.2 : 0.4}
+        scale={isMobile ? 0.8 : 0.4}
         position={isMobile ? [0, -1, 0] : [0, -1, 0]}
       />
     </mesh>
@@ -41,8 +41,8 @@ const About = () => {
     };
   }, []);
   return (
-    <Layout slug="about" className="grid-cols-2">
-      <div className="col-span-2 lg:col-span-1 h-screen">
+    <Layout slug="about" className="grid-cols-2 grid-rows-3">
+      <div className="col-span-2 row-span-1 lg:row-span-3 lg:col-span-1 w-full h-full">
         <Canvas
           frameloop="demand"
           shadows
@@ -61,7 +61,7 @@ const About = () => {
           <Preload all />
         </Canvas>
       </div>
-      <div className="col-span-2 lg:col-span-1 flex flex-col gap-4">
+      <div className="col-span-2 row-span-2 lg:row-span-3 lg:col-span-1 flex flex-col gap-4 w-full h-full justify-start lg:justify-center">
         <h2 className="text-3xl font-bold">درباره من</h2>
         <p>
           من سعید توازنی هستم، یک توسعه دهنده وب با 5 سال سابقه کار در اصفهان.
