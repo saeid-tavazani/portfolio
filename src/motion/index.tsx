@@ -44,3 +44,20 @@ export const aboutVariants: Variants = {
     },
   },
 };
+
+export function skillsVariants(delayTime: number): Variants {
+  return {
+    offscreen: {
+      scale: 0,
+    },
+    onscreen: {
+      scale: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.1,
+        duration: 0.9,
+        delay: delayTime / 20,
+      },
+    },
+  };
+}
