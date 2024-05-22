@@ -7,7 +7,7 @@ const Skills = () => {
       <h2 className="text-center text-3xl font-bold">مهارت های من</h2>
       <div className="flex gap-4 justify-center py-5 flex-wrap">
         {Ability.map((item) => (
-          <img className="w-14" src={item} />
+          <img className="w-14" key={item} src={item} />
         ))}
       </div>
     </Layout>
