@@ -17,10 +17,10 @@ const Navbar = () => {
             <a href="#projects">پروژه ها</a>
           </li>
           <li>
-            <a href="#Skills">مهارت های من</a>
+            <a href="#skills">مهارت های من</a>
           </li>
           <li>
-            <a href="#Contact">راه های ارتباطی</a>
+            <a href="#contact">راه های ارتباطی</a>
           </li>
         </ul>
         <a
