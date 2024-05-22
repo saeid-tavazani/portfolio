@@ -53,13 +53,13 @@ const Hello = () => {
   }, []);
   return (
     <Layout slug="home" className="grid-cols-2">
-      <div className="sm:col-span-2 lg:col-span-1">
+      <div className="col-span-2 lg:col-span-1">
         <h1 className="text-4xl font-bold leading-[60px] text-center">
           سلام من سعید توازانی هستم <br /> توسعه دهنده
           <span className="text-gradient"> Front-End </span> هستم
         </h1>
       </div>
-      <div className="sm:col-span-2 h-screen lg:col-span-1">
+      <div className="col-span-2 h-screen lg:col-span-1">
         <Canvas
           frameloop="demand"
           shadows

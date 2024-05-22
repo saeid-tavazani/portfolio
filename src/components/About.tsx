@@ -42,7 +42,7 @@ const About = () => {
   }, []);
   return (
     <Layout slug="about" className="grid-cols-2">
-      <div className="sm:col-span-2 lg:col-span-1 h-screen">
+      <div className="col-span-2 lg:col-span-1 h-screen">
         <Canvas
           frameloop="demand"
           shadows
@@ -61,7 +61,7 @@ const About = () => {
           <Preload all />
         </Canvas>
       </div>
-      <div className="sm:col-span-2 lg:col-span-1 flex flex-col gap-4">
+      <div className="col-span-2 lg:col-span-1 flex flex-col gap-4">
         <h2 className="text-3xl font-bold">درباره من</h2>
         <p>
           من سعید توازنی هستم، یک توسعه دهنده وب با 5 سال سابقه کار در اصفهان.
