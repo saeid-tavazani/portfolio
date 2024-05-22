@@ -9,7 +9,7 @@ type prop = {
 
 const Layout = ({ children, className, slug, display }: prop) => {
   return (
-    <section id={slug} className="w-screen h-lvh relative">
+    <section id={slug} className="w-100% h-screen overflow-hidden">
       <motion.article
         initial="offscreen"
         whileInView="onscreen"
