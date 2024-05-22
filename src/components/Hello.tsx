@@ -1,9 +1,10 @@
 import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import { motion } from "framer-motion";
 import Layout from "./Layout";
 import { NavbarData } from "../assets/data";
+import { motion } from "framer-motion";
+import { model3D, helloVariants } from "../motion";
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("/3DModelMac/scene.gltf");
@@ -53,14 +54,20 @@ const Hello = () => {
   }, []);
   return (
     <Layout slug="home" className="grid-cols-2 grid-rows-3">
-      <div className="col-span-2 row-span-1 lg:row-span-3 lg:col-span-1">
+      <motion.div
+        className="col-span-2 row-span-1 lg:row-span-3 lg:col-span-1"
+        variants={helloVariants}
+      >
         <h1 className="text-4xl font-bold leading-[60px] text-center">
           سلام! من {NavbarData.name} هستم
           <br className="hidden lg:block" />
           <span className="text-gradient"> {NavbarData.jobPosition} </span>
         </h1>
-      </div>
-      <div className="col-span-2 row-span-2 lg:row-span-3 lg:col-span-1 w-full h-full">
+      </motion.div>
+      <motion.div
+        className="col-span-2 row-span-2 lg:row-span-3 lg:col-span-1 w-full h-full"
+        variants={model3D}
+      >
         <div className="w-full h-full">
           <Canvas
             frameloop="demand"
@@ -82,7 +89,7 @@ const Hello = () => {
             <Preload all />
           </Canvas>
         </div>
-      </div>
+      </motion.div>
       <a
         href="#about"
         className="w-7 h-14 border border-solid absolute bottom-8 left-1/2 rounded-xl flex py-2 justify-center cursor-pointer"
