@@ -39,7 +39,7 @@ export const aboutVariants: Variants = {
     opacity: 1,
     transition: {
       type: "spring",
-      bounce: 0.4,
+      bounce: 0.1,
       duration: 0.9,
     },
   },
