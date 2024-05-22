@@ -8,9 +8,6 @@ const Navbar = () => {
           <p>{NavbarData.jobPosition}</p>
         </div>
         <ul className="flex items-center gap-4">
-          <li>
-            <a href="#home">خانه</a>
-          </li>
           {NavbarData.navigation.map((item) => (
             <li key={item.slug}>
               <a href={`#${item.slug}`}>{item.title}</a>
