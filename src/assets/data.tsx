@@ -18,8 +18,11 @@ export const Skills: string[] = [
   "/public/Skills/(17).svg",
   "/public/Skills/(18).svg",
 ];
-
-export const ContactMe = {
+type ContactMeType = {
+  title: string;
+  text: string;
+};
+export const ContactMe: ContactMeType = {
   title: "راه های ارتباطی با من",
   text: "از اینکه به وب‌سایت من سر زدید، بسیار خوشحالم! اگر سوالی دارید، نیاز به مشاوره فنی دارید، یا می‌خواهید در مورد پروژه‌ای صحبت کنید، می‌توانید از راه‌های زیر با من در ارتباط باشید",
 };
@@ -129,3 +132,23 @@ export const Link: LinkType[] = [
     ),
   },
 ];
+
+type NavbarDataType = {
+  name: string;
+  jobPosition: string;
+  navigation: { slug: string; title: string }[];
+  contactMe: LinkType;
+};
+
+export const NavbarData: NavbarDataType = {
+  name: "سعید توازانی",
+  jobPosition: "برنامه نویس Front-End",
+  navigation: [
+    { slug: "home", title: "خانه" },
+    { slug: "about", title: "درباره من" },
+    // { slug: "projects", title: "پروژه ها" },
+    { slug: "skills", title: "مهارت های من" },
+    { slug: "contact", title: "راه های ارتباطی" },
+  ],
+  contactMe: Link[Link.length - 1],
+};
