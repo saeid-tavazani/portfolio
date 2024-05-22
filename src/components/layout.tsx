@@ -8,9 +8,9 @@ type prop = {
 
 const Layout = ({ children, className, slug }: prop) => {
   return (
-    <section id={slug} className="w-screen h-screen flex items-center relative">
+    <section id={slug} className="w-screen h-screen relative">
       <article
-        className={`container mx-auto grid items-center px-5 gap-4 ${
+        className={`container mx-auto grid h-full pt-28 lg:pt-0 items-center px-5 gap-4 ${
           className ? className : ""
         }`}
       >

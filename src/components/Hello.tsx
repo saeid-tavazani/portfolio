@@ -11,7 +11,7 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
     <mesh>
       <hemisphereLight intensity={0.35} groundColor="black" />
       <spotLight
-        position={[0, 3, -1]}
+        position={isMobile ? [0, 3.6, -1.5] : [0, 3, -1]}
         angle={5}
         penumbra={2}
         intensity={8}
@@ -30,8 +30,8 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
       <ambientLight intensity={0.5} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 3 : 6}
-        position={isMobile ? [0, -1, 1] : [0, -1, 1]}
+        scale={isMobile ? 12 : 6}
+        position={isMobile ? [0, 0, 0] : [0, -1, 1]}
         rotation={[0, 1.6, 0.3]}
       />
     </mesh>
@@ -52,32 +52,36 @@ const Hello = () => {
     };
   }, []);
   return (
-    <Layout slug="home" className="grid-cols-2">
-      <div className="col-span-2 lg:col-span-1">
+    <Layout slug="home" className="grid-cols-2 grid-rows-3">
+      <div className="col-span-2 row-span-1 lg:row-span-3 lg:col-span-1">
         <h1 className="text-4xl font-bold leading-[60px] text-center">
-          سلام من سعید توازانی هستم <br /> توسعه دهنده
+          سلام من سعید توازانی هستم <br className="hidden lg:block" /> توسعه
+          دهنده
           <span className="text-gradient"> Front-End </span> هستم
         </h1>
       </div>
-      <div className="col-span-2 h-screen lg:col-span-1">
-        <Canvas
-          frameloop="demand"
-          shadows
-          dpr={[1, 2]}
-          gl={{ preserveDrawingBuffer: true }}
-        >
-          <Suspense fallback={null}>
-            <OrbitControls
-              enableZoom={false}
-              maxPolarAngle={Math.PI / 2}
-              minPolarAngle={Math.PI / 2}
-            />
-            <Computers isMobile={isMobile} />
-            <ambientLight />
-          </Suspense>
+      <div className="col-span-2 row-span-2 lg:row-span-3 lg:col-span-1 w-full h-full">
+        <div className="w-full h-full">
+          <Canvas
+            frameloop="demand"
+            shadows
+            dpr={[1, 2]}
+            gl={{ preserveDrawingBuffer: true }}
+            camera={{ near: 0.1, far: 1000 }}
+          >
+            <Suspense fallback={null}>
+              <OrbitControls
+                enableZoom={false}
+                maxPolarAngle={Math.PI / 2}
+                minPolarAngle={Math.PI / 2}
+              />
+              <Computers isMobile={isMobile} />
+              <ambientLight />
+            </Suspense>
 
-          <Preload all />
-        </Canvas>
+            <Preload all />
+          </Canvas>
+        </div>
       </div>
       <a
         href="#about"
