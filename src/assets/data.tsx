@@ -1,22 +1,40 @@
-export const Skills: string[] = [
-  "/public/Skills/(1).svg",
-  "/public/Skills/(2).svg",
-  "/public/Skills/(3).svg",
-  "/public/Skills/(4).svg",
-  "/public/Skills/(5).svg",
-  "/public/Skills/(6).svg",
-  "/public/Skills/(7).svg",
-  "/public/Skills/(8).svg",
-  "/public/Skills/(9).svg",
-  "/public/Skills/(10).svg",
-  "/public/Skills/(11).svg",
-  "/public/Skills/(12).svg",
-  "/public/Skills/(13).svg",
-  "/public/Skills/(14).svg",
-  "/public/Skills/(15).svg",
-  "/public/Skills/(16).svg",
-  "/public/Skills/(17).svg",
-  "/public/Skills/(18).svg",
+import bootstrap from "../../public/Skills/bootstrap.svg";
+import css from "../../public/Skills/css.svg";
+import express from "../../public/Skills/express.svg";
+import git from "../../public/Skills/git.svg";
+import html from "../../public/Skills/html.svg";
+import javascript from "../../public/Skills/javascript.svg";
+import jquery from "../../public/Skills/jquery .svg";
+import linux from "../../public/Skills/linux.svg";
+import mongodb from "../../public/Skills/mongodb.svg";
+import mysql from "../../public/Skills/mysql.svg";
+import nextjs from "../../public/Skills/nextjs.svg";
+import nodejs from "../../public/Skills/nodejs.svg";
+import react from "../../public/Skills/react.svg";
+import redux from "../../public/Skills/redux.svg";
+import sass from "../../public/Skills/sass.svg";
+import sequelize from "../../public/Skills/sequelize.svg";
+import tailwind from "../../public/Skills/tailwind.svg";
+import typescript from "../../public/Skills/typescript.svg";
+export const Skills = [
+  bootstrap,
+  css,
+  express,
+  git,
+  html,
+  javascript,
+  jquery,
+  linux,
+  mongodb,
+  mysql,
+  nextjs,
+  nodejs,
+  react,
+  redux,
+  sass,
+  sequelize,
+  tailwind,
+  typescript,
 ];
 type ContactMeType = {
   title: string;
