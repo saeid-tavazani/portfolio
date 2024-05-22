@@ -10,7 +10,7 @@ const Layout = ({ children, className, slug }: prop) => {
   return (
     <section id={slug} className="w-screen h-screen flex items-center relative">
       <article
-        className={`container mx-auto grid items-center gap-4 ${
+        className={`container mx-auto grid items-center px-5 gap-4 ${
           className ? className : ""
         }`}
       >

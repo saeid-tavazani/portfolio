@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <header className="w-screen my-8 fixed top-0 left-0 right-0 z-50">
-      <article className="container mx-auto flex items-center gap-2 justify-between flex-wrap md:flex-row flex-col md:text-start text-center">
+      <article className="container px-5 mx-auto flex items-center gap-2 justify-between flex-wrap md:flex-row flex-col md:text-start text-center">
         <div>
           <h1 className="font-bold text-xl mb-1">سعید توازانی</h1>
           <p>برنامه نویس Front-End</p>
