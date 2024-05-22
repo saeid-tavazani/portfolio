@@ -56,7 +56,7 @@ export function skillsVariants(delayTime: number): Variants {
         type: "spring",
         bounce: 0.1,
         duration: 0.9,
-        delay: delayTime / 20,
+        delay: delayTime,
       },
     },
   };
