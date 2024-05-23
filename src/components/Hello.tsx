@@ -104,8 +104,8 @@ const Hello = () => {
           className="w-3 h-3 rounded-full bg-white"
         ></motion.span>
       </a>
-      {/* <div id="shadow-lightPink" className="h left-[-20%] bottom-[-40%]"></div>
-      <div id="shadow-purple" className="h right-[-25%] top-[-20%]"></div> */}
+      <div id="shadow-lightPink" className="h left-[-20%] bottom-[-40%]"></div>
+      <div id="shadow-purple" className="h right-[-25%] top-[-20%]"></div>
     </Layout>
   );
 };
