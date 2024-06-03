@@ -28,7 +28,13 @@ main {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
+main::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 .text-gradient {
   @apply bg-clip-text text-transparent;
   background-image: linear-gradient(65deg, #f3d693, #e68895, #6551d4);
